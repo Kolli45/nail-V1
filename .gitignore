@@ -1,0 +1,24 @@
+﻿# Dependencies
+node_modules/
+
+# Build output
+dist/
+dist-ssr/
+
+# Netlify and framework cache
+.netlify/
+.tanstack/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+*.local
+
+# Test and logs
+coverage/
+*.log
+
+# Operating system
+.DS_Store
+
