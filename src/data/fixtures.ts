@@ -3,14 +3,11 @@
  * Every screen reads from this module, so real persistence can replace it later.
  */
 
-/** Netlify Image CDN URL for a photo in /public/img (served at 2x for crisp phones). */
-export function img(name: string, w: number, h?: number) {
-  const params = new URLSearchParams({ url: `/img/${name}.jpg`, w: String(w * 2), fm: 'webp', q: '80' })
-  if (h) {
-    params.set('h', String(h * 2))
-    params.set('fit', 'cover')
-  }
-  return `/.netlify/images?${params.toString()}`
+/** Photo from /public/img, served directly by the site. */
+export function img(name: string, _w?: number, _h?: number) {
+  void _w
+  void _h
+  return `/img/${name}.jpg`
 }
 
 export const currency = (n: number) => `${n} DZD`
