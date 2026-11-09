@@ -5,7 +5,6 @@ import {
   ArrowRight,
   Banknote,
   Check,
-  ChevronDown,
   CreditCard,
   Heart,
   MapPin,
@@ -212,13 +211,7 @@ export function ShippingScreen() {
             <input className={inputCls} type="tel" placeholder="+213 000 00 00 00" autoComplete="tel" {...bind('phone')} />
           </Field>
           <Field label="State / Province" icon={MapIcon}>
-            <select className={cn(inputCls, 'appearance-none pr-9')} {...bind('state')}>
-              <option value="" disabled hidden></option>
-              <option>Algiers</option>
-              <option>Oran</option>
-              <option>Constantine</option>
-            </select>
-            <ChevronDown className="absolute right-3.5 top-[13px] @3xl:top-[16px] size-[17px] text-mute pointer-events-none" />
+            <input className={inputCls} placeholder="Enter your state" autoComplete="address-level1" {...bind('state')} />
           </Field>
           <Field label="City" icon={Building}>
             <input className={inputCls} autoComplete="address-level2" {...bind('city')} />
